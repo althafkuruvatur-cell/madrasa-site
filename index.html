@@ -2,69 +2,127 @@
 <html lang="ml">
 <head>
 <meta charset="UTF-8">
-<title>തർബിയ്യത്തുൽ ഉലൂം മദ്രസ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>തർബിയ്യത്തുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
 
 <style>
+
 body{
 font-family: Arial;
-background:#f2f2f2;
+margin:0;
+background:#f2f4f7;
 text-align:center;
 }
 
-table{
-margin:auto;
-border-collapse:collapse;
-width:80%;
-background:white;
-}
-
-th,td{
-border:1px solid #444;
-padding:10px;
-}
-
-th{
-background:#2c7a7b;
+header{
+background:#0f766e;
 color:white;
+padding:20px;
 }
 
-h1{
-color:#1a365d;
+header h1{
+margin:5px;
+font-size:22px;
 }
+
+header p{
+margin:0;
+font-size:14px;
+}
+
+.container{
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+.card{
+padding:20px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+text-decoration:none;
+display:block;
+}
+
+.students{background:#22c55e;}
+.results{background:#3b82f6;}
+.gallery{background:#f59e0b;}
+.contact{background:#06b6d4;}
+
+.bigbtn{
+margin-top:20px;
+padding:15px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+display:block;
+text-decoration:none;
+}
+
+.admission{background:#2563eb;}
+.bookshop{background:#f97316;}
+
+footer{
+margin-top:30px;
+padding:15px;
+font-size:14px;
+color:#555;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>തർബിയ്യത്തുൽ ഉലൂം മദ്രസ</h1>
-<h3>കൊലക്കാട്ടൂചാലി</h3>
+<header>
+<h1>തർബിയ്യത്തുൽ ഉലൂം</h1>
+<p>സെക്കൻഡറി മദ്രസ – കൊളക്കാട്ടുചാലി</p>
+</header>
 
-<p>മൊത്തം ക്ലാസുകൾ : 10</p>
+<div class="container">
 
-<h2>വിദ്യാർത്ഥികളുടെ വിവരങ്ങൾ</h2>
+<h2>സ്വാഗതം</h2>
 
-<table>
+<div class="grid">
 
-<tr>
-<th>ക്ലാസ്</th>
-<th>ആൺകുട്ടികൾ</th>
-<th>പെൺകുട്ടികൾ</th>
-<th>മൊത്തം</th>
-</tr>
+<a class="card students" href="#">
+👨‍🎓 വിദ്യാർത്ഥികൾ
+</a>
 
-<tr><td>Class 1</td><td>6</td><td>9</td><td>15</td></tr>
-<tr><td>Class 2</td><td>8</td><td>14</td><td>22</td></tr>
-<tr><td>Class 3</td><td>18</td><td>9</td><td>27</td></tr>
-<tr><td>Class 4</td><td>15</td><td>18</td><td>33</td></tr>
-<tr><td>Class 5</td><td>13</td><td>10</td><td>23</td></tr>
-<tr><td>Class 6</td><td>9</td><td>12</td><td>21</td></tr>
-<tr><td>Class 7</td><td>6</td><td>12</td><td>18</td></tr>
-<tr><td>Class 8</td><td>7</td><td>11</td><td>18</td></tr>
-<tr><td>Class 9</td><td>7</td><td>10</td><td>17</td></tr>
-<tr><td>Class 10</td><td>4</td><td>8</td><td>12</td></tr>
+<a class="card results" href="#">
+📊 പരീക്ഷാ ഫലം
+</a>
 
-</table>
+<a class="card gallery" href="#">
+🖼 ഗാലറി
+</a>
+
+<a class="card contact" href="#">
+📞 ബന്ധപ്പെടുക
+</a>
+
+</div>
+
+<a class="bigbtn admission" href="#">
+📥 ONLINE ADMISSION
+</a>
+
+<a class="bigbtn bookshop" href="#">
+📚 BOOK SHOP
+</a>
+
+</div>
+
+<footer>
+© 2026 Tarbiyyathul Uloom Madrasa
+</footer>
 
 </body>
 </html>
