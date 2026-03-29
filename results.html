@@ -7,11 +7,12 @@
 <title>പരീക്ഷാ ഫലം</title>
 
 <style>
+
 body{
+  margin:0;
   font-family:Arial;
   background:#f2f4f7;
   text-align:center;
-  margin:0;
 }
 
 header{
@@ -20,53 +21,66 @@ header{
   padding:20px;
 }
 
-table{
-  width:90%;
-  margin:20px auto;
-  border-collapse:collapse;
+h1{
+  margin:0;
+}
+
+.container{
+  padding:20px;
+}
+
+.card{
   background:white;
+  padding:15px;
+  margin:10px auto;
+  border-radius:10px;
+  width:90%;
+  max-width:400px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-th, td{
-  padding:10px;
-  border:1px solid #ddd;
-}
-
-th{
-  background:#3b82f6;
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#22c55e;
   color:white;
+  text-decoration:none;
+  border-radius:8px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
 <header>
-<h2>📊 പരീക്ഷാ ഫലം</h2>
+  <h1>📊 പരീക്ഷാ ഫലം</h1>
 </header>
 
-<table>
+<div class="container">
 
-<tr>
-<th>ക്ലാസ്</th>
-<th>ആൺകുട്ടികൾ</th>
-<th>പെൺകുട്ടികൾ</th>
-<th>മൊത്തം</th>
-</tr>
+  <div class="card">
+    <h3>അഹമ്മദ്</h3>
+    <p>ക്ലാസ്: 5</p>
+    <p>മാർക്ക്: 85%</p>
+  </div>
 
-<tr><td>Class 1</td><td>6</td><td>9</td><td>15</td></tr>
-<tr><td>Class 2</td><td>8</td><td>14</td><td>22</td></tr>
-<tr><td>Class 3</td><td>18</td><td>9</td><td>27</td></tr>
-<tr><td>Class 4</td><td>15</td><td>18</td><td>33</td></tr>
-<tr><td>Class 5</td><td>13</td><td>10</td><td>23</td></tr>
-<tr><td>Class 6</td><td>9</td><td>12</td><td>21</td></tr>
-<tr><td>Class 7</td><td>6</td><td>12</td><td>18</td></tr>
-<tr><td>Class 8</td><td>7</td><td>11</td><td>18</td></tr>
-<tr><td>Class 9</td><td>7</td><td>10</td><td>17</td></tr>
-<tr><td>Class 10</td><td>4</td><td>8</td><td>12</td></tr>
+  <div class="card">
+    <h3>മുഹമ്മദ്</h3>
+    <p>ക്ലാസ്: 6</p>
+    <p>മാർക്ക്: 90%</p>
+  </div>
 
-</table>
+  <div class="card">
+    <h3>അലി</h3>
+    <p>ക്ലാസ്: 7</p>
+    <p>മാർക്ക്: 78%</p>
+  </div>
+
+  <a href="index.html" class="back">⬅️ Home</a>
+
+</div>
 
 </body>
 </html>
