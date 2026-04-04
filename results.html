@@ -1,164 +1,152 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>പരീക്ഷാ ഫലം</title>
+<title>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
 
 <style>
-  <style>
 body{
   margin:0;
   font-family:Arial;
   background:#f2f4f7;
-  text-align:center;
 }
 
-.result-box{
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.2);
-  max-width:350px;
-  margin:40px auto;
-}
-
-h2{
-  color:#0f766e;
-}
-
-select, input{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-button{
-  width:100%;
-  padding:15px;
-  background:#1d4ed8;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-}
-</style>
-.card{
-  background:white;
-  padding:15px;
-  margin-bottom:15px;
-  border-radius:10px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  text-align:left;
-}
-
-.card h3{
-  margin:0;
-  color:#2563eb;
-}
-
-.card p{
-  margin:5px 0;
-  font-size:15px;
-}
-
-.back{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 15px;
+/* Header */
+header{
   background:#0f766e;
   color:white;
-  text-decoration:none;
-  border-radius:8px;
-}.card p{
-  margin:5px 0;
-  font-size:16px;
-}
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f2f4f7;
+  padding:25px 15px;
   text-align:center;
 }
 
-header{
-  background:#3b82f6;
-  color:white;
-  padding:20px;
-}
-
-h1{
-  margin:0;
-}
-
+/* Container */
 .container{
   padding:20px;
 }
 
-.card{
-  background:white;
-  padding:15px;
-  margin:10px auto;
-  border-radius:10px;
-  width:90%;
-  max-width:400px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
 }
 
-.back{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 20px;
-  background:#22c55e;
+/* Cards */
+.card{
+  border-radius:15px;
+  padding:25px 10px;
+  color:white;
+  text-align:center;
+  text-decoration:none;
+  font-size:16px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover */
+.card:hover{
+  transform:scale(1.05);
+  transition:0.3s;
+}
+
+/* Colors */
+.students{ background:#22c55e; }
+.results{ background:#3b82f6; }
+.gallery{ background:#f59e0b; }
+.contact{ background:#06b6d4; }
+.teachers{ background:#8b5cf6; }
+
+/* Big Buttons */
+.bigbtn{
+  display:block;
+  margin-top:15px;
+  padding:15px;
+  border-radius:12px;
   color:white;
   text-decoration:none;
-  border-radius:8px;
+  font-weight:bold;
 }
 
+.admission{ background:#2563eb; }
+.bookshop{ background:#f97316; }
+
+/* WhatsApp Button */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:18px;
+}
+
+/* Footer */
+footer{
+  margin-top:30px;
+  background:#0f766e;
+  color:white;
+  text-align:center;
+  padding:15px;
+  font-size:14px;
+}
 </style>
+
 </head>
 
 <body>
-<div class="result-box">
 
+<header>
 <h2>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</h2>
+<p>കൊളക്കാട്ട് ശൈലം</p>
+</header>
 
-<p>Annual Exam Results 2025-26</p>
+<div class="container">
 
-<select>
-  <option>-- ക്ലാസ് തിരഞ്ഞെടുക്കുക --</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
+<div class="grid">
 
-<input type="text" placeholder="പേര് നൽകുക">
+<a class="card students" href="students.html">
+👨‍🎓<br>വിദ്യാർത്ഥികൾ
+</a>
 
-<button onclick="searchStudent()">RESULT കാണാം</button>
+<a class="card results" href="results.html">
+📊<br>പരീക്ഷാ ഫലം
+</a>
+
+<a class="card gallery" href="gallery.html">
+🖼️<br>ഗാലറി
+</a>
+
+<a class="card contact" href="contact.html">
+📞<br>ബന്ധപ്പെടുക
+</a>
+
+<a class="card teachers" href="teachers.html">
+👨‍🏫<br>അധ്യാപകർ
+</a>
 
 </div>
 
+<a class="bigbtn admission" href="#">
+📥 ONLINE ADMISSION
+</a>
 
-<script>
-function searchStudent(){
-  let input = document.getElementById("search").value.toLowerCase();
-  let cards = document.getElementsByClassName("card");
+<a class="bigbtn bookshop" href="#">
+📚 BOOK SHOP
+</a>
 
-  for(let i=0; i<cards.length; i++){
-    let name = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+</div>
 
-    if(name.includes(input)){
-      cards[i].style.display = "block";
-    }else{
-      cards[i].style.display = "none";
-    }
-  }
-}
-</script>
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919747095471">
+🟢
+</a>
+
+<footer>
+© 2026 തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ
+</footer>
+
 </body>
 </html>
