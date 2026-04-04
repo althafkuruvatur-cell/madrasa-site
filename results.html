@@ -7,6 +7,45 @@
 <title>പരീക്ഷാ ഫലം</title>
 
 <style>
+  <style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f2f4f7;
+  text-align:center;
+}
+
+.result-box{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  max-width:350px;
+  margin:40px auto;
+}
+
+h2{
+  color:#0f766e;
+}
+
+select, input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  background:#1d4ed8;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+}
+</style>
 .card{
   background:white;
   padding:15px;
@@ -83,37 +122,28 @@ h1{
 </head>
 
 <body>
+<div class="result-box">
 
+<h2>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</h2>
+
+<p>Annual Exam Results 2025-26</p>
+
+<select>
+  <option>-- ക്ലാസ് തിരഞ്ഞെടുക്കുക --</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+
+<input type="text" placeholder="പേര് നൽകുക">
+
+<button>RESULT കാണാം</button>
+
+</div>
 <header>
-  <h1>📊 പരീക്ഷാ ഫലം</h1>
-</header>
 
-<div class="container">
-<input type="text" id="search" placeholder="പേര് തിരയൂ..." onkeyup="searchStudent()" style="padding:10px; width:90%; border-radius:8px; border:1px solid #ccc; margin-bottom:15px;">
-  <div class="card">
-  <h3>അഹമ്മദ്</h3>
-  <p>ക്ലാസ്: 5</p>
-  <p>മാർക്ക്: 85%</p>
-  <p style="color:green;">Result: Pass</p>
-</div>
-
-<div class="card">
-  <h3>മുഹമ്മദ്</h3>
-  <p>ക്ലാസ്: 6</p>
-  <p>മാർക്ക്: 90%</p>
-  <p style="color:green;">Result: Pass</p>
-</div>
-
-<div class="card">
-  <h3>അലി</h3>
-  <p>ക്ലാസ്: 7</p>
-  <p>മാർക്ക്: 78%</p>
-  <p style="color:red;">Result: Fail</p>
-</div>
-
-<a href="index.html" class="back">⬅️ Home</a>
-
-</div>
 <script>
 function searchStudent(){
   let input = document.getElementById("search").value.toLowerCase();
