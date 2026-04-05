@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
 
 <style>
@@ -19,76 +20,41 @@ header{
   text-align:center;
 }
 
-/* Navigation */
-nav{
-  background:#065f46;
-  padding:10px;
-  text-align:center;
-}
-
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
-}
-
 /* Container */
 .container{
   padding:20px;
 }
 
-/* Grid layout */
+/* Grid */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:15px;
 }
 
-/* Card */
+/* Cards */
 .card{
-  background:white;
-  padding:20px;
   border-radius:15px;
-  text-align:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Images */
-.card img{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-}
-
-/* Buttons */
-.button{
-  display:block;
-  margin-top:10px;
-  padding:10px;
-  background:#3b82f6;
+  padding:20px;
   color:white;
-  border-radius:10px;
+  text-align:center;
   text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Footer */
-footer{
-  margin-top:20px;
-  background:#0f766e;
-  color:white;
-  text-align:center;
-  padding:15px;
+/* Hover */
+.card:hover{
+  transform:scale(1.05);
+  transition:0.3s;
 }
 
-/* 📱 Responsive */
-@media(max-width:600px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-}
+/* Colors */
+.students{ background:#10b981; }
+.results{ background:#3b82f6; }
+.gallery{ background:#f59e0b; }
+.contact{ background:#22c55e; }
+
 </style>
-
 </head>
 
 <body>
@@ -98,45 +64,29 @@ footer{
 <p>കൊളക്കാട്ട് ശൈലം</p>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="results.html">Results</a>
-<a href="gallery.html">Gallery</a>
-<a href="teachers.html">Teachers</a>
-</nav>
-
 <div class="container">
 
 <div class="grid">
 
-<div class="card">
-<img src="IMG_4396.jpeg">
-<h3>അധ്യാപകർ</h3>
-<a href="teachers.html" class="button">View</a>
-</div>
+<a class="card students" href="students.html">
+👨‍🎓<br>ക്ലാസ് വിവരങ്ങൾ
+</a>
 
-<div class="card">
-<h3>പരീക്ഷാ ഫലം</h3>
-<a href="results.html" class="button">Check</a>
-</div>
+<a class="card results" href="results.html">
+📊<br>പരീക്ഷാ ഫലം
+</a>
 
-<div class="card">
-<h3>ഗാലറി</h3>
-<a href="gallery.html" class="button">Open</a>
-</div>
+<a class="card gallery" href="gallery.html">
+🖼️<br>ഗാലറി
+</a>
 
-<div class="card">
-<h3>ബന്ധപ്പെടുക</h3>
-<a href="contact.html" class="button">Call</a>
-</div>
+<a class="card contact" href="contact.html">
+📞<br>ബന്ധപ്പെടുക
+</a>
 
 </div>
 
 </div>
-
-<footer>
-© 2026 തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ
-</footer>
 
 </body>
 </html>
