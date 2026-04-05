@@ -1,162 +1,141 @@
 <!DOCTYPE html>
 <html lang="ml">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>തർബിയ്യത്തുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
+<title>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
 
 <style>
-
 body{
   margin:0;
-  font-family: Arial;
+  font-family:Arial;
   background:#f2f4f7;
-  text-align:center;
 }
 
+/* Header */
 header{
   background:#0f766e;
   color:white;
   padding:20px;
+  text-align:center;
 }
 
-header h1{
-  margin:5px;
-  font-size:22px;
+/* Navigation */
+nav{
+  background:#065f46;
+  padding:10px;
+  text-align:center;
 }
 
-header p{
-  margin:0;
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
   font-size:14px;
 }
 
+/* Container */
 .container{
   padding:20px;
 }
 
-h2{
-  margin-top:20px;
-}
-
+/* Grid layout */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:15px;
-  margin-top:20px;
 }
 
+/* Card */
 .card{
+  background:white;
   padding:20px;
-  border-radius:10px;
-  color:white;
-  font-weight:bold;
-  text-decoration:none;
-  display:block;
-}
-
-.students{background:#22c55e;}
-.results{background:#3b82f6;}
-.gallery{background:#f59e0b;}
-.contact{background:#06b6d4;}
-.teachers{background:#8b5cf6;}
-
-.bigbtn{
-  margin-top:20px;
-  padding:15px;
-  border-radius:10px;
-  color:white;
-  font-weight:bold;
-  display:block;
-  text-decoration:none;
-}
-
-.admission{background:#2563eb;}
-.bookshop{background:#f97316;}
-
-footer{
-  margin-top:30px;
-  padding:15px;
-  font-size:14px;
-  color:#555;
-}
-
-/* WhatsApp Button */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
-}
-
-</style>
-  .card{
   border-radius:15px;
-  padding:20px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.card img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+}
+
+/* Buttons */
+.button{
+  display:block;
+  margin-top:10px;
+  padding:10px;
+  background:#3b82f6;
   color:white;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  border-radius:10px;
+  text-decoration:none;
 }
-  .card:hover{
-  transform:scale(1.05);
-  transition:0.3s;
+
+/* Footer */
+footer{
+  margin-top:20px;
+  background:#0f766e;
+  color:white;
+  text-align:center;
+  padding:15px;
 }
+
+/* 📱 Responsive */
+@media(max-width:600px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
 </head>
 
 <body>
 
-<a href="https://wa.me/919747095471">WhatsApp</a>
-🟢
-</a>
-
 <header>
-<h1>തർബിയ്യത്തുൽ ഉലൂം</h1>
-<p>സെക്കൻഡറി മദ്രസ – കൊളക്കാട്ടുചാലി</p>
+<h2>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</h2>
+<p>കൊളക്കാട്ട് ശൈലം</p>
 </header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="results.html">Results</a>
+<a href="gallery.html">Gallery</a>
+<a href="teachers.html">Teachers</a>
+</nav>
 
 <div class="container">
 
-<h2>സ്വാഗതം</h2>
-
 <div class="grid">
 
-<a class="card students" href="students.html">
-👨‍🎓 വിദ്യാർത്ഥികൾ
-</a>
-
-<a class="card results" href="results.html">
-📊 പരീക്ഷാ ഫലം
-</a>
-
-<a class="card gallery" href="gallery.html">
-🖼 ഗാലറി
-</a>
-
-<a class="card contact" href="contact.html">
-📞 ബന്ധപ്പെടുക
-</a>
-
-<a class="card teachers" href="teachers.html">
-👨‍🏫 അധ്യാപകർ
-</a>
-
+<div class="card">
+<img src="IMG_4396.jpeg">
+<h3>അധ്യാപകർ</h3>
+<a href="teachers.html" class="button">View</a>
 </div>
 
-<a class="bigbtn admission" href="#">
-📥 ONLINE ADMISSION
-</a>
+<div class="card">
+<h3>പരീക്ഷാ ഫലം</h3>
+<a href="results.html" class="button">Check</a>
+</div>
 
-<a class="bigbtn bookshop" href="#">
-📚 BOOK SHOP
-</a>
+<div class="card">
+<h3>ഗാലറി</h3>
+<a href="gallery.html" class="button">Open</a>
+</div>
+
+<div class="card">
+<h3>ബന്ധപ്പെടുക</h3>
+<a href="contact.html" class="button">Call</a>
+</div>
+
+</div>
 
 </div>
 
 <footer>
-© 2026 Tarbiyyathul Uloom Madrasa
+© 2026 തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ
 </footer>
 
 </body>
