@@ -1,64 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ml">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</title>
 
 <style>
- body{
-  margin:0;
-  font-family:Arial;
-  background:#eef2f7;
-}
-
-/* Header */
-header{
-  background:#0f766e;
-  color:white;
-  padding:30px 15px;
-  text-align:center;
-  border-bottom-left-radius:20px;
-  border-bottom-right-radius:20px;
-}
-
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  padding:20px;
-}
-
-/* Cards */
-.card{
-  border-radius:20px;
-  padding:30px 15px;
-  color:white;
-  text-align:center;
-  font-size:18px;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:0.3s;
-}
-
-/* Hover effect */
-.card:hover{
-  transform:translateY(-5px) scale(1.03);
-}
-
-/* Colors */
-.students{ background:linear-gradient(135deg,#34d399,#059669); }
-.results{ background:linear-gradient(135deg,#60a5fa,#2563eb); }
-.gallery{ background:linear-gradient(135deg,#fbbf24,#f59e0b); }
-.contact{ background:linear-gradient(135deg,#4ade80,#22c55e); }
-
-/* Mobile */
-@media(max-width:600px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-} 
 body{
   margin:0;
   font-family:Arial;
@@ -75,6 +22,16 @@ header{
   border-bottom-right-radius:20px;
 }
 
+header h2{
+  margin:0;
+  font-size:22px;
+}
+
+header p{
+  margin:5px 0 0;
+  font-size:14px;
+}
+
 /* Grid */
 .grid{
   display:grid;
@@ -95,7 +52,7 @@ header{
   transition:0.3s;
 }
 
-/* Hover effect */
+/* Hover */
 .card:hover{
   transform:translateY(-5px) scale(1.03);
 }
@@ -112,39 +69,34 @@ header{
     grid-template-columns:1fr;
   }
 }
-
 </style>
-  
+
 </head>
 
 <body>
 
 <header>
 <h2>തർബിയതുൽ ഉലൂം സെക്കൻഡറി മദ്രസ</h2>
-<p>കൊളക്കാട്ടുചാലി </p>
+<p>കൊളക്കാട്ട് ശൈലം</p>
 </header>
-
-<div class="container">
 
 <div class="grid">
 
 <a class="card students" href="students.html">
-👨‍🎓<br>ക്ലാസ് വിവരങ്ങൾ
+🎓<br><br>ക്ലാസ് വിവരങ്ങൾ
 </a>
 
 <a class="card results" href="results.html">
-📊<br>പരീക്ഷാ ഫലം
+📊<br><br>പരീക്ഷാ ഫലം
 </a>
 
 <a class="card gallery" href="gallery.html">
-🖼️<br>ഗാലറി
+🖼️<br><br>ഗാലറി
 </a>
 
 <a class="card contact" href="contact.html">
-📞<br>ബന്ധപ്പെടുക
+📞<br><br>ബന്ധപ്പെടുക
 </a>
-
-</div>
 
 </div>
 
