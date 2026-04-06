@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ക്ലാസ് വിവരങ്ങൾ</title>
+
+<style>
+body{
+  font-family:Arial;
+  text-align:center;
+  background:#eef2f7;
+}
+
+.box{
+  background:white;
+  padding:20px;
+  margin:50px auto;
+  width:300px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+select,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+}
+
+button{
+  background:#3b82f6;
+  color:white;
+  border:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h3>ക്ലാസ് തിരഞ്ഞെടുക്കുക</h3>
+
+<select id="classSelect">
+  <option value="">-- Select Class --</option>
+  <option value="class1.html">Class 1</option>
+  <option value="class2.html">Class 2</option>
+</select>
+
+<button onclick="goClass()">Open</button>
+
+</div>
+
+<script>
+function goClass(){
+  var c=document.getElementById("classSelect").value;
+  if(c!=""){
+    window.location=c;
+  }
+}
+</script>
+
+</body>
+</html>
