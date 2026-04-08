@@ -122,7 +122,40 @@ footer{
 
 <p>കൊളക്കാട്ടുച്ചാലി</p>
 </header>
+  <script>
+function openMenu(){
+  document.getElementById("menu").style.left="0";
+}
+function closeMenu(){
+  document.getElementById("menu").style.left="-250px";
+}
+</script>
+<!-- MENU BUTTON -->
+<div onclick="openMenu()" style="font-size:25px; padding:10px; cursor:pointer;">☰</div>
 
+<!-- SIDE MENU -->
+<div id="menu" style="
+position:fixed;
+top:0;
+left:-250px;
+width:250px;
+height:100%;
+background:#0f766e;
+color:white;
+padding:20px;
+transition:0.3s;
+">
+
+<h3>Menu</h3>
+
+<p onclick="closeMenu()">❌ Close</p>
+
+<a href="index.html" style="color:white; display:block; margin:10px 0;">🏠 Home</a>
+<a href="students.html" style="color:white; display:block; margin:10px 0;">🎓 Class</a>
+<a href="results.html" style="color:white; display:block; margin:10px 0;">📊 Result</a>
+<a href="#" style="color:white; display:block; margin:10px 0;">📞 Contact</a>
+
+</div>
 <!-- WELCOME -->
 <div class="welcome">
 <h3>സ്വാഗതം</h3>
@@ -163,6 +196,18 @@ footer{
 <footer>
 📍 കൊളക്കാട്ടുച്ചാലി | © 2026 മദ്രസ
 </footer>
+<footer style="background:#0f766e; color:white; padding:20px; text-align:center;">
 
+<h3>Social Media</h3>
+
+<a href="https://facebook.com" style="color:white; margin:10px;">📘</a>
+<a href="https://youtube.com" style="color:white; margin:10px;">▶️</a>
+<a href="https://wa.me/919999999999" style="color:white; margin:10px;">🟢</a>
+
+<p>📞 9061969505</p>
+
+<p>© 2026 Madrasa</p>
+
+</footer>
 </body>
 </html>
