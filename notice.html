@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>അറിയിപ്പുകൾ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notice Board</title>
 
 <style>
 body{
@@ -15,66 +15,113 @@ body{
 .header{
   background:#0f766e;
   color:white;
-  padding:20px;
+  padding:15px;
   text-align:center;
 }
 
-/* Notice box */
+/* Form */
+.form{
+  padding:15px;
+  background:white;
+  margin:15px;
+  border-radius:10px;
+}
+
+input,button{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+}
+
+button{
+  background:#0f766e;
+  color:white;
+  border:none;
+}
+
+/* Notice */
 .notice{
   background:white;
   margin:15px;
   padding:15px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
+  border-radius:10px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
 
-.notice:hover{
-  transform:scale(1.02);
-}
-
-/* Date */
 .date{
-  font-size:12px;
   color:gray;
+  font-size:12px;
 }
 
-/* Home button */
-.home-btn{
+/* Home */
+.home{
   display:block;
   margin:20px;
   text-align:center;
   background:#0f766e;
   color:white;
-  padding:12px;
+  padding:10px;
   border-radius:10px;
   text-decoration:none;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
-<h2>📢 അറിയിപ്പുകൾ</h2>
+<h2>📢 Notice Board</h2>
 </div>
 
-<div class="notice">
-<p><b>Admission Started</b></p>
-<p class="date">Date: 10-04-2026</p>
+<!-- ADD NOTICE -->
+<div class="form">
+<h3>➕ Add Notice</h3>
+
+<input type="text" id="title" placeholder="Title">
+<input type="text" id="date" placeholder="Date">
+<button onclick="addNotice()">Add</button>
+
 </div>
 
-<div class="notice">
-<p><b>Annual Exam Result Coming Soon</b></p>
-<p class="date">Date: 12-04-2026</p>
-</div>
+<!-- DISPLAY -->
+<div id="noticeList"></div>
 
-<div class="notice">
-<p><b>Class തുടങ്ങുന്നു Monday മുതൽ</b></p>
-<p class="date">Date: 15-04-2026</p>
-</div>
+<a href="index.html" class="home">⬅ Home</a>
 
-<a href="index.html" class="home-btn">⬅ Home</a>
+<script>
+
+// Load notices
+let notices = JSON.parse(localStorage.getItem("notices")) || [];
+
+function showNotices(){
+  let output="";
+  notices.reverse().forEach(n=>{
+    output += `
+    <div class="notice">
+      <b>${n.title}</b>
+      <div class="date">${n.date}</div>
+    </div>`;
+  });
+  document.getElementById("noticeList").innerHTML=output;
+}
+
+function addNotice(){
+  let title=document.getElementById("title").value;
+  let date=document.getElementById("date").value;
+
+  if(title=="") return;
+
+  notices.push({title,date});
+  localStorage.setItem("notices",JSON.stringify(notices));
+
+  showNotices();
+}
+
+showNotices();
+
+</script>
 
 </body>
 </html>
