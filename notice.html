@@ -91,7 +91,65 @@ button{
 <a href="index.html" class="home">⬅ Home</a>
 
 <script>
+<script>
 
+let password = "1234"; // 👉 നിന്റെ password ഇവിടെ change ചെയ്യാം
+
+// Load notices
+let notices = JSON.parse(localStorage.getItem("notices")) || [];
+
+function showNotices(){
+  let output="";
+  notices.forEach((n,index)=>{
+    output += `
+    <div class="notice">
+      <b>${n.title}</b>
+      <div class="date">${n.date}</div>
+
+      <button onclick="deleteNotice(${index})">🗑 Delete</button>
+    </div>`;
+  });
+  document.getElementById("noticeList").innerHTML=output;
+}
+
+function addNotice(){
+
+  let pass = prompt("Enter Admin Password:");
+
+  if(pass !== password){
+    alert("Wrong Password!");
+    return;
+  }
+
+  let title=document.getElementById("title").value;
+  let date=document.getElementById("date").value;
+
+  if(title=="") return;
+
+  notices.push({title,date});
+  localStorage.setItem("notices",JSON.stringify(notices));
+
+  showNotices();
+}
+
+function deleteNotice(index){
+
+  let pass = prompt("Enter Password to Delete:");
+
+  if(pass !== password){
+    alert("Wrong Password!");
+    return;
+  }
+
+  notices.splice(index,1);
+  localStorage.setItem("notices",JSON.stringify(notices));
+
+  showNotices();
+}
+
+showNotices();
+
+</script>
 // Load notices
 let notices = JSON.parse(localStorage.getItem("notices")) || [];
 
