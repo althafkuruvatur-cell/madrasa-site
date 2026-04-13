@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notice Board</title>
+<title>അറിയിപ്പുകൾ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-
 body{
-.notice-bar{
-  background:#f59e0b;
-  color:white;
-  padding:10px;
-  font-weight:bold;
-}  margin:0;
   font-family:Arial;
   background:#eef2f7;
+  margin:0;
 }
 
 /* Header */
-header{
+.header{
   background:#0f766e;
   color:white;
   padding:20px;
@@ -27,79 +20,61 @@ header{
 }
 
 /* Notice box */
-.notice-container{
-  padding:20px;
-}
-
 .notice{
   background:white;
-  border-left:5px solid #0f766e;
+  margin:15px;
   padding:15px;
-  margin-bottom:15px;
-  border-radius:10px;
+  border-radius:12px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
-/* Title */
-.notice h3{
-  margin:0;
-  color:#0f766e;
+.notice:hover{
+  transform:scale(1.02);
 }
 
 /* Date */
-.notice small{
+.date{
+  font-size:12px;
   color:gray;
 }
 
-/* Back button */
-.back{
+/* Home button */
+.home-btn{
   display:block;
   margin:20px;
-  padding:12px;
   text-align:center;
   background:#0f766e;
   color:white;
-  text-decoration:none;
+  padding:12px;
   border-radius:10px;
+  text-decoration:none;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<header>
-  <h2>📢 Notice Board</h2>
-</header>
-<div class="notice-bar">
-  <marquee>
-    📢 അഡ്മിഷൻ ആരംഭിച്ചു | 📢 പരീക്ഷാഫലം ഉടൻ | 📢 പുതിയ അറിയിപ്പുകൾ പരിശോധിക്കുക
-  </marquee>
-</div>
-<div class="notice-container">
-
-  <div class="notice">
-    <h3>Annual Exam Notice</h3>
-    <small>10 March 2026</small>
-    <p>Annual exam will start from April 1.</p>
-  </div>
-
-  <div class="notice">
-    <h3>Holiday Announcement</h3>
-    <small>5 March 2026</small>
-    <p>Madrasa will be closed on Friday.</p>
-  </div>
-
-  <div class="notice">
-    <h3>Parent Meeting</h3>
-    <small>1 March 2026</small>
-    <p>Meeting at 10 AM in Madrasa hall.</p>
-  </div>
-
+<div class="header">
+<h2>📢 അറിയിപ്പുകൾ</h2>
 </div>
 
-<a href="index.html" class="back">⬅ Home ലേക്ക് പോവുക</a>
+<div class="notice">
+<p><b>Admission Started</b></p>
+<p class="date">Date: 10-04-2026</p>
+</div>
+
+<div class="notice">
+<p><b>Annual Exam Result Coming Soon</b></p>
+<p class="date">Date: 12-04-2026</p>
+</div>
+
+<div class="notice">
+<p><b>Class തുടങ്ങുന്നു Monday മുതൽ</b></p>
+<p class="date">Date: 15-04-2026</p>
+</div>
+
+<a href="index.html" class="home-btn">⬅ Home</a>
 
 </body>
 </html>
