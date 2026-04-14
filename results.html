@@ -1,8 +1,8 @@
 <body>
-<body>
 
 <header style="background:#0f766e;color:white;padding:20px;text-align:center;">
 <h2>📊 പരീക്ഷ ഫലം</h2>
+<p>Result Status</p>
 </header>
 
 <div style="padding:20px;">
@@ -34,10 +34,10 @@ Search
 <script>
 
 let data = [
-  {name:"Asees", class:"1", mark:"95%"},
-  {name:"Faizan", class:"1", mark:"88%"},
-  {name:"Nihal", class:"2", mark:"90%"},
-  {name:"Shamil", class:"2", mark:"85%"}
+  {name:"Asees", class:"1", status:"Pass"},
+  {name:"Faizan", class:"1", status:"Fail"},
+  {name:"Nihal", class:"2", status:"Pass"},
+  {name:"Shamil", class:"2", status:"Pass"}
 ];
 
 function searchResult(){
@@ -54,11 +54,14 @@ function searchResult(){
 
   if(results.length > 0){
     results.forEach(r => {
+
+      let color = r.status === "Pass" ? "green" : "red";
+
       output += `
       <div style="background:white;margin:15px;padding:15px;border-radius:10px;box-shadow:0 5px 10px rgba(0,0,0,0.1);">
         <h3>${r.name}</h3>
         Class: ${r.class}<br>
-        Mark: ${r.mark}
+        Status: <b style="color:${color}">${r.status}</b>
       </div>`;
     });
   } else {
@@ -69,10 +72,5 @@ function searchResult(){
 }
 
 </script>
-
-</body>
-
-
-
 
 </body>
