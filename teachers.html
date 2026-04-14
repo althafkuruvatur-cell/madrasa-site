@@ -1,4 +1,3 @@
-<h1 style="color:red;">NEW TEACHERS PAGE</h1>
 <!DOCTYPE html>
 <html lang="ml">
 <head>
@@ -10,54 +9,95 @@
 <style>
 
 body{
-  margin:0;
-  font-family:Arial;
-  background:#f2f4f7;
-  text-align:center;
+    margin:0;
+    font-family:Arial;
+    background:#eef2f7;
 }
 
+/* Header */
 header{
-  background:#8b5cf6;
-  color:white;
-  padding:20px;
+    background:linear-gradient(135deg,#0f766e,#115e59);
+    color:white;
+    padding:25px;
+    text-align:center;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
 }
 
+/* Container */
 .container{
-  padding:20px;
+    padding:20px;
 }
 
+/* Grid */
 .grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
+/* Card */
 .card{
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
+.card:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+/* Image */
 .card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
 }
 
+/* Name */
 .card h3{
-  margin:10px 0 5px;
+    margin:10px 0 5px;
 }
 
+/* Subject */
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+/* Contact icons */
+.icons{
+    margin-top:10px;
+}
+
+.icons a{
+    margin:0 5px;
+    text-decoration:none;
+    font-size:20px;
+}
+
+/* Back button */
 .back{
-  display:inline-block;
-  margin-top:20px;
-  padding:10px 15px;
-  background:#0f766e;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
+    display:block;
+    margin:25px auto;
+    width:150px;
+    padding:12px;
+    text-align:center;
+    background:#0f766e;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .grid{
+        grid-template-columns:1fr;
+    }
 }
 
 </style>
@@ -66,23 +106,47 @@ header{
 <body>
 
 <header>
-  <h1>👨‍🏫 അധ്യാപകർ</h1>
+<h1>👨‍🏫 അധ്യാപകർ</h1>
+<p>നമ്മുടെ മദ്റസയിലെ അധ്യാപകർ</p>
 </header>
 
 <div class="container">
 
 <div class="grid">
 
+<!-- Teacher 1 -->
 <div class="card">
-  <img src="IMG_4396.jpeg">
-  <h3>ഉസ്താദ് 1</h3>
-  <p>അറബിക്</p>
+<img src="IMG_4396.jpeg">
+<h3>TK മുഹമ്മദ് ഇർഫാൻ</h3>
+<p>ക്ലാസ്: 1, 4, 8</p>
+
+<div class="icons">
+<a href="#">📞</a>
+<a href="#">🟢</a>
+</div>
 </div>
 
+<!-- Teacher 2 -->
 <div class="card">
-  <img src="IMG_6009.jpeg">
-  <h3>ഉസ്താദ് 2</h3>
-  <p>ഖുര്‍ആന്‍</p>
+<img src="IMG_6012.jpeg">
+<h3>ഹംസ ഹൈസി</h3>
+<p>ക്ലാസ്: 3, 5, 6</p>
+
+<div class="icons">
+<a href="#">📞</a>
+</div>
+</div>
+
+<!-- Teacher 3 -->
+<div class="card">
+<img src="IMG_7150.jpeg">
+<h3>ഉമർ മർസൂഖ്</h3>
+<p>ക്ലാസ്: 2, 7</p>
+
+<div class="icons">
+<a href="#">📞</a>
+<a href="#">🟢</a>
+</div>
 </div>
 
 </div>
