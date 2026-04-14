@@ -1,28 +1,78 @@
 <body>
+<body>
 
-<header>
+<header style="background:#0f766e;color:white;padding:20px;text-align:center;">
 <h2>📊 പരീക്ഷ ഫലം</h2>
-<p>Exam Results</p>
 </header>
 
-<div style="padding:20px">
+<div style="padding:20px;">
 
-<h3>ക്ലാസ് തിരഞ്ഞെടുക്കുക</h3>
+<h3>🔍 പേര് search ചെയ്യൂ</h3>
 
-<ul style="list-style:none; padding:0;">
-<li><a href="#" style="display:block; padding:10px; background:#2563eb; color:white; margin:10px 0; border-radius:10px; text-decoration:none;">Class 1</a></li>
+<input type="text" id="name" placeholder="Enter Name" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;">
 
-<li><a href="#" style="display:block; padding:10px; background:#2563eb; color:white; margin:10px 0; border-radius:10px; text-decoration:none;">Class 2</a></li>
+<h3>🎓 ക്ലാസ് തിരഞ്ഞെടുക്കുക</h3>
 
-<li><a href="#" style="display:block; padding:10px; background:#2563eb; color:white; margin:10px 0; border-radius:10px; text-decoration:none;">Class 3</a></li>
-</ul>
+<select id="class" style="width:100%;padding:10px;border-radius:8px;">
+  <option value="">All</option>
+  <option value="1">Class 1</option>
+  <option value="2">Class 2</option>
+</select>
 
-<br>
-
-<a href="index.html" style="text-decoration:none; color:white; background:#0f766e; padding:10px 15px; border-radius:10px;">
-⬅ Home ലേക്ക് പോകുക
-</a>
+<button onclick="searchResult()" style="width:100%;padding:12px;margin-top:10px;background:#0f766e;color:white;border:none;border-radius:10px;">
+Search
+</button>
 
 </div>
+
+<div id="output"></div>
+
+<a href="index.html" style="display:block;margin:20px;text-align:center;background:#0f766e;color:white;padding:10px;border-radius:10px;text-decoration:none;">
+⬅ Home
+</a>
+
+<script>
+
+let data = [
+  {name:"Asees", class:"1", mark:"95%"},
+  {name:"Faizan", class:"1", mark:"88%"},
+  {name:"Nihal", class:"2", mark:"90%"},
+  {name:"Shamil", class:"2", mark:"85%"}
+];
+
+function searchResult(){
+
+  let name = document.getElementById("name").value.toLowerCase();
+  let cls = document.getElementById("class").value;
+
+  let results = data.filter(s => 
+    (name === "" || s.name.toLowerCase().includes(name)) &&
+    (cls === "" || s.class === cls)
+  );
+
+  let output = "";
+
+  if(results.length > 0){
+    results.forEach(r => {
+      output += `
+      <div style="background:white;margin:15px;padding:15px;border-radius:10px;box-shadow:0 5px 10px rgba(0,0,0,0.1);">
+        <h3>${r.name}</h3>
+        Class: ${r.class}<br>
+        Mark: ${r.mark}
+      </div>`;
+    });
+  } else {
+    output = `<div style="margin:20px;">❌ No result found</div>`;
+  }
+
+  document.getElementById("output").innerHTML = output;
+}
+
+</script>
+
+</body>
+
+
+
 
 </body>
