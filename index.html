@@ -1,118 +1,142 @@
 <!DOCTYPE html>
 <html lang="ml">
 <head>
-  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>തർബിയത്തുല് ഉലൂം സെക്കണ്ടറി മദ്രസ</title>
+<title>തർബിയത്തുല്‍ ഉലൂം സെക്കണ്ടറി മദ്റസ</title>
 
 <style>
-.notice{
-  background:linear-gradient(135deg,#f97316,#ea580c);
-}
+
+/* Body */
 body{
-  margin:0;
-  font-family:Arial;
-  background:#eef2f7;
+    margin:0;
+    font-family:Arial;
+    background:#eef2f7;
 }
 
-/* HEADER */
+/* Header */
 header{
-  background:#0f766e;
-  color:white;
-  padding:20px;
-  text-align:center;
+    background:linear-gradient(135deg,#065f46,#0f766e,#d4af37);
+    color:white;
+    padding:30px 15px;
+    text-align:center;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* MOVING TITLE */
-.marquee{
-  font-weight:bold;
-  font-size:18px;
-  color:yellow;
+/* Moving title */
+.moving{
+    display:inline-block;
+    animation:move 5s infinite alternate;
 }
 
-/* WELCOME */
-.welcome{
-  text-align:center;
-  padding:20px;
+@keyframes move{
+    from{transform:translateX(-20px);}
+    to{transform:translateX(20px);}
 }
 
-.welcome p{
-  color:#555;
+/* Address */
+.address{
+    margin-top:10px;
+    font-size:14px;
 }
 
-/* GRID */
+/* Notice bar */
+.notice-bar{
+    background:#d4af37;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* Grid */
 .grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
 }
 
-/* CARD */
+/* Cards */
 .card{
-  border-radius:20px;
-  padding:30px;
-  color:white;
-  text-align:center;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:0.3s;
+    border-radius:20px;
+    padding:25px 15px;
+    color:white;
+    text-align:center;
+    font-size:18px;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+    font-weight:bold;
 }
 
 .card:hover{
-  transform:scale(1.05);
+    transform:translateY(-8px) scale(1.04);
 }
 
-/* COLORS */
-.students{ background:#22c55e; }
-.results{ background:#3b82f6; }
-.gallery{ background:#f59e0b; }
-.contact{ background:#16a34a; }
-
-/* SOCIAL */
-.social{
-  text-align:center;
-  padding:20px;
+/* Colors */
+.students{
+    background:linear-gradient(135deg,#059669,#065f46);
 }
 
-.social a{
-  margin:10px;
-  font-size:20px;
-  text-decoration:none;
+.results{
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
 }
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-  font-size:20px;
+.gallery{
+    background:linear-gradient(135deg,#d4af37,#b8860b);
 }
 
-/* FOOTER */
+.contact{
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+}
+
+.teachers{
+    background:linear-gradient(135deg,#7c3aed,#5b21b6);
+}
+
+.notice{
+    background:linear-gradient(135deg,#dc2626,#991b1b);
+}
+
+/* Footer */
 footer{
-  background:#0f766e;
-  color:white;
-  text-align:center;
-  padding:15px;
+    background:#065f46;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
 }
 
-/* MOBILE */
+/* Social icons */
+.social a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:22px;
+}
+
+/* WhatsApp button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:24px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
 @media(max-width:600px){
-  .grid{
-    grid-template-columns:1fr;
-  }
+    .grid{
+        grid-template-columns:1fr;
+    }
 }
 
 </style>
@@ -121,104 +145,76 @@ footer{
 <body>
 
 <header>
-<h2>തർബിയത്തുല് ഉലൂം സെക്കണ്ടറി മദ്രസ</h2>
 
-<marquee class="marquee">
-സ്വാഗതം | Welcome to Madrasa Website
-</marquee>
+<h1 class="moving">
+🕌 തർബിയത്തുല്‍ ഉലൂം സെക്കണ്ടറി മദ്റസ
+</h1>
 
-<p>കൊളക്കാട്ടുച്ചാലി</p>
+<p>കൊളക്കാട്ട് ശൈലം</p>
+
+<div class="address">
+📍 Kolakkatt Shailam, Kerala
+</div>
+
 </header>
-  <script>
-function openMenu(){
-  document.getElementById("menu").style.left="0";
-}
-function closeMenu(){
-  document.getElementById("menu").style.left="-250px";
-}
-</script>
-<!-- MENU BUTTON -->
-<div onclick="openMenu()" style="font-size:25px; padding:10px; cursor:pointer;">☰</div>
 
-<!-- SIDE MENU -->
-<div id="menu" style="
-position:fixed;
-top:0;
-left:-250px;
-width:250px;
-height:100%;
-background:#0f766e;
-color:white;
-padding:20px;
-transition:0.3s;
-">
-
-<h3>Menu</h3>
-
-<p onclick="closeMenu()">❌ Close</p>
-
-<a href="index.html" style="color:white; display:block; margin:10px 0;">🏠 Home</a>
-<a href="students.html" style="color:white; display:block; margin:10px 0;">🎓 Class</a>
-<a href="results.html" style="color:white; display:block; margin:10px 0;">📊 Result</a>
-<a href="#" style="color:white; display:block; margin:10px 0;">📞 Contact</a>
-<a href="notice.html" class="card notice">
-📢<br><br>അറിയിപ്പുകൾ
-</a>
-</div>
-<!-- WELCOME -->
-<div class="welcome">
-<h3>സ്വാഗതം</h3>
-<p>TUSM മദ്രസ  വെബ്സൈറ്റിലേക്ക് സ്വാഗതം</p>
+<!-- Notice -->
+<div class="notice-bar">
+<marquee>
+📢 Admission Started | 📢 New Classes Starting | 📢 Welcome to Tarbiyathul Uloom Secondary Madrasa
+</marquee>
 </div>
 
-<!-- GRID -->
+<!-- Cards -->
 <div class="grid">
 
-<a class="card students" href="#">🎓<br>ക്ലാസ് വിവരങ്ങൾ</a>
+<a class="card students" href="students.html">
+🎓<br>ക്ലാസ് വിവരങ്ങൾ
+</a>
 
-<a class="card results" href="results.html">📊<br>പരീക്ഷ ഫലം</a>
+<a class="card results" href="results.html">
+📊<br>പരീക്ഷ ഫലം
+</a>
 
-<a class="card gallery" href="gallery.html">🖼️<br>ഗാലറി</a>
-
-<a class="card contact" href="#">📞<br>ബന്ധപ്പെടുക</a>
 <a class="card teachers" href="teachers.html">
 👨‍🏫<br>അധ്യാപകർ
 </a>
+
+<a class="card gallery" href="gallery.html">
+🖼️<br>ഗാലറി
+</a>
+
+<a class="card notice" href="notice.html">
+📢<br>അറിയിപ്പുകൾ
+</a>
+
+<a class="card contact" href="contact.html">
+📞<br>ബന്ധപ്പെടുക
+</a>
+
 </div>
 
-<!-- SOCIAL -->
-<div class="social">
-<h3>Follow Us</h3>
-
-<a href="https://www.instagram.com/tusm_madrasa_240?igsh=MzB0eHhveWRmb3Rm&utm_source=qr">📸 Instagram</a>
-<a href="https://youtube.com">▶️ YouTube</a>
-
-</div>
-
-<!-- COMMITTEE -->
-<div class="welcome">
-<h3>കമ്മിറ്റി</h3>
-<p>പ്രസിഡന്റ് | സെക്രട്ടറി | ട്രഷറർ</p>
-</div>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919747095471">🟢</a>
-
+<!-- Footer -->
 <footer>
-📍 കൊളക്കാട്ടുച്ചാലി | © 2026 മദ്രസ
+
+<h3>📱 സോഷ്യൽ മീഡിയ</h3>
+
+<div class="social">
+<a href="#">📷</a>
+<a href="#">▶️</a>
+<a href="#">🟢</a>
+</div>
+
+<br>
+
+© 2026 Tarbiyathul Uloom Secondary Madrasa
+
 </footer>
-<footer style="background:#0f766e; color:white; padding:20px; text-align:center;">
 
-<h3>Social Media</h3>
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919061969505">
+🟢
+</a>
 
-<a href="https://facebook.com" style="color:white; margin:10px;">📘</a>
-<a href="https://youtube.com" style="color:white; margin:10px;">▶️</a>
-<a href="https://wa.me/919999999999" style="color:white; margin:10px;">🟢</a>
-
-<p>📞 9061969505</p>
-
-<p>© 2026 Madrasa</p>
-
-</footer>
 </body>
 </html>
