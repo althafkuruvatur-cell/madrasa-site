@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>കമ്മിറ്റി അംഗങ്ങൾ</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7f6;
+}
+
+header{
+    background:linear-gradient(135deg,#065f46,#0f766e);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.container{
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    padding-bottom:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:12px 0 5px;
+}
+
+.card p{
+    color:#444;
+    margin:5px 0;
+}
+
+.call-btn{
+    display:inline-block;
+    background:#0f766e;
+    color:white;
+    padding:10px 15px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:10px;
+}
+
+.back{
+    display:inline-block;
+    margin:20px;
+    background:#065f46;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+@media(max-width:600px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🕌 കമ്മിറ്റി അംഗങ്ങൾ</h1>
+<p>തർബിയത്തുല്‍ ഉലൂം സെക്കണ്ടറി മദ്റസ</p>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<img src="member1.jpg">
+<h3>President Name</h3>
+<p>President</p>
+<a class="call-btn" href="tel:+919999999999">
+📞 വിളിക്കുക
+</a>
+</div>
+
+<div class="card">
+<img src="member2.jpg">
+<h3>Secretary Name</h3>
+<p>Secretary</p>
+<a class="call-btn" href="tel:+919999999999">
+📞 വിളിക്കുക
+</a>
+</div>
+
+<div class="card">
+<img src="member3.jpg">
+<h3>Treasurer Name</h3>
+<p>Treasurer</p>
+<a class="call-btn" href="tel:+919999999999">
+📞 വിളിക്കുക
+</a>
+</div>
+
+<div class="card">
+<img src="member4.jpg">
+<h3>Member Name</h3>
+<p>Committee Member</p>
+<a class="call-btn" href="tel:+919999999999">
+📞 വിളിക്കുക
+</a>
+</div>
+
+</div>
+
+<a class="back" href="index.html">
+⬅️ Home Page
+</a>
+
+</div>
+
+</body>
+</html>
